@@ -57,6 +57,11 @@ setopt list_packed
 # タイプミスした時に指摘してくれる
 setopt correct
 
+# ls でフォルダに色をつける
+export LSCOLORS=dxax
+
+alias ls="ls -GF"
+
 # cd後のlsの省略
 setopt auto_cd
 function chpwd() { ls }

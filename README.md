@@ -1,1 +1,3 @@
-sh install.sh
+# Command
+
+sh dotfile.sh

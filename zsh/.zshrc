@@ -19,12 +19,8 @@ SAVEHIST=1000000
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # jenv path 設定
-echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(jenv init -)"' >> ~/.zshrc
-
-# java path 設定
-export PATH=$PATH:/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home/bin
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_201.jdk/Contents/Home
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 ########################################
 # brew

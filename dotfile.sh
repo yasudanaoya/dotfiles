@@ -2,9 +2,6 @@
 echo 'declare the variable'
 DOT_DIR=${HOME}/dotfiles
 
-echo 'homebrew install command'
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 echo 'Run app install on homeberw'
 brew bundle
 

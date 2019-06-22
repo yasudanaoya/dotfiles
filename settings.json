@@ -1,34 +1,28 @@
 {
-  "workbench.startupEditor": "newUntitledFile",
-  "window.zoomLevel": 0,
-  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}",
-  "editor.renderIndentGuides": false,
+  "workbench.startupEditor": "newUntitledFile", // 起動時に空ファイルを表示
+  "window.zoomLevel": 0, // window を拡大しない
+  "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}", // ウインドウ枠に表示するファイル名を設定
+  "editor.renderIndentGuides": false, // インデント表示は拡張機能を使っているので無効化
   "workbench.colorTheme": "One Dark Pro Vivid",
   "editor.tabSize": 2, // space(2)
-  "files.associations": {
-    "*.erb": "erb"
-  },
-  "emmet.includeLanguages": {
-    "erb": "html"
-  },
+  "files.associations": { "*.erb": "erb" }, // 変数定義
+  "emmet.includeLanguages": { "erb": "html" }, // erb ファイルにも Emmet を適用
   "editor.insertSpaces": true, // tabキーで space を入力
   "explorer.confirmDragAndDrop": false, // drag & drop の無効
   "editor.dragAndDrop": false, // コードの drag & drop 無効
   "workbench.statusBar.feedback.visible": false, // twitter icon 無効
   "editor.minimap.enabled": false, // minimap 無効
   "editor.renderWhitespace": "boundary", // 半角スペースをドットで表示
-  "breadcrumbs.enabled": true,
+  "breadcrumbs.enabled": true, // パンくずリストを表示
   "gitlens.hovers.enabled": false, // マウスホバー時の表示 無効
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true, // 保存時にフォーマッタを当てる
   "files.insertFinalNewline": true, // 保存時に文末に空行を一行追加する
   "files.trimFinalNewlines": true, // 保存時に文末の不要な改行を削除
   "files.trimTrailingWhitespace": true, // 保存時に行末のスペースを削除
-  "editor.suggestSelection": "first",
+  "[markdown]": { "files.trimTrailingWhitespace": false }, // *.md ファイルではスペース削除を無効化
+  "editor.suggestSelection": "first", // 一番上をサジェスト
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue", // 保存時に行末の不要なスペースを削除
   "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/",
-
-  "git.ignoreLimitWarning": true,
-  "sync.gist": "289feab5fa2139d00c2a6f0820daae04",
-  "[markdown]": { "files.trimTrailingWhitespace": false },
-  "java.configuration.checkProjectSettingsExclusions": false // git の警告を無効化
+  "git.ignoreLimitWarning": false, // リポジトリで変更が多い時の警告を無効化
+  "sync.gist": "289feab5fa2139d00c2a6f0820daae04"
 }

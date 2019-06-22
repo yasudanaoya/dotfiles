@@ -32,6 +32,7 @@ tap 'homebrew/cask-versions'
 cask 'sequel-pro-nightly'
 
 tap 'homebrew/cask'
+<<<<<<< HEAD
 cask 'amazon-music'
 cask 'azure-data-studio'
 cask 'chromedriver'
@@ -47,6 +48,19 @@ cask 'astah-professional'
 cask 'db-browser-for-sqlite'
 cask 'google-chrome'
 cask 'slack'
+=======
+cask 'astah-professional'
+cask 'chromedriver'
+cask 'docker'
+cask 'evernote'
+cask 'slack'
+cask 'xmind'
+
+tap 'caskroom/cask'
+cask 'background-music'
+cask 'drawio'
+cask 'visual-studio-code'
+>>>>>>> develop
 
 tap 'heroku/brew'
 brew 'heroku'
@@ -60,12 +74,17 @@ brew 'FreeTDS'
 brew 'Nginx'
 
 # Other Cask applications
+<<<<<<< HEAD
 cask 'HyperSwitch'
 cask 'Notable'
 cask 'background-music'
 cask 'drawio'
 cask 'postman'
 cask 'visual-studio-code'
+=======
+cask 'db-browser-for-sqlite'
+cask 'google-chrome'
+>>>>>>> develop
 
 # App Store applications
 mas 'com.apple.dt.Xcode', id: id:

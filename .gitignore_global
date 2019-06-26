@@ -1,1 +1,11 @@
 .DS_Store
+
+# ua
+## ua-web-admin
+src/environments/local.js
+src/submodules/reblitz-js/
+src/submodules/reblitz-js-for-ua/
+
+## ua-server
+api.conf
+.project

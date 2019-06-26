@@ -8,4 +8,4 @@
   co = checkout
 
 [core]
-  excludesfile = ${HOME}/.gitignore_globals
+  excludesfile = /Users/yasudanaoya/.gitignore_global

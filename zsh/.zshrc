@@ -101,8 +101,10 @@ autoload -Uz vcs_info
 autoload -Uz add-zsh-hook
 
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%F{green}[%b]%f'
-zstyle ':vcs_info:*' actionformats '%F{red}[%b]<!%a>%f'
+zstyle ':vcs_info:*' stagedstr '%F{yellow}!'
+zstyle ':vcs_info:*' unstagedstr '%F{red}-'
+zstyle ':vcs_info:*' formats '%F{green}%c%u[%b]%f'
+zstyle ':vcs_info:*' actionformats '%F{red}[%b]<%a>%f'
 
 function vcs_info_msg() {
     LANG=en_US.UTF-8 vcs_info

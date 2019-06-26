@@ -1,11 +1,18 @@
-[user]
-	name = yasudanaoya
-	email = 43776161+yasudanaoya@users.noreply.github.com
+# [user]
+# git コマンドのエイリアスの参考になればと残しました
+# user.email はダミーのを設定する方が良いと思います(個人的な意見)
+# commit log にここのメアドが乗るのですが、
+# 自分のメアドがログに残るって嫌じゃないですか？
+# やり方はググれば5分でできます
+# 	name = yasudanaoya
+# 	email = 43776161+yasudanaoya@users.noreply.github.com
 
 [alias]
-  b = branch
-  s = status
-  co = checkout
+# 慣れると楽ちんだけど、知らないで設定すると混乱するので OFF
+  # b = branch
+  # s = status
+  # co = checkout
 
 [core]
-  excludesfile = /Users/yasudanaoya/.gitignore_global
+# 必須で ignore してほしいファイルがあるので、記載してます。
+  excludesfile = ${HOME}/.gitignore_global

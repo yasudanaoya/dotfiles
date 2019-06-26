@@ -24,33 +24,40 @@ brew 'rbenv-gemset'
 brew 'readline'
 brew 'ruby-build'
 brew 'unixodbc'
-brew 'zsh'
+
+# 作者おすすめ shell
+# いつからか mac のデフォルトになるそうで(2019/6時点では bash)
+# brew 'zsh'
 
 tap 'homebrew/bundle'
 
 tap 'homebrew/cask-versions'
-cask 'sequel-pro-nightly'
+# cask 'sequel-pro-nightly'
 
 tap 'homebrew/cask'
-cask 'amazon-music'
+# cask 'amazon-music'
 cask 'azure-data-studio'
 cask 'chromedriver'
 cask 'docker'
-cask 'evernote'
+# cask 'evernote'
+
+# 作者おすすめターミナル
+# mac 使うならこれ以外ないと思う。
 cask 'iterm2'
-cask 'shiftit'
-cask 'springtoolsuite'
-cask 'xmind'
 
-tap 'caskroom/cask'
-cask 'astah-professional'
-cask 'db-browser-for-sqlite'
-cask 'google-chrome'
-cask 'slack'
+# cask 'shiftit'
+# cask 'springtoolsuite'
+# cask 'xmind'
 
-tap 'heroku/brew'
-brew 'heroku'
-brew 'heroku-node'
+# tap 'caskroom/cask'
+# cask 'astah-professional'
+# cask 'db-browser-for-sqlite'
+# cask 'google-chrome'
+# cask 'slack'
+
+# tap 'heroku/brew'
+# brew 'heroku'
+# brew 'heroku-node'
 
 tap 'rcmdnk/file'
 brew 'brew-file'
@@ -60,13 +67,13 @@ brew 'FreeTDS'
 brew 'Nginx'
 
 # Other Cask applications
-cask 'HyperSwitch'
-cask 'Notable'
-cask 'background-music'
-cask 'drawio'
+# cask 'HyperSwitch'
+# cask 'Notable'
+# cask 'background-music'
+# cask 'drawio'
 cask 'postman'
 cask 'visual-studio-code'
 
 # App Store applications
-mas 'com.apple.dt.Xcode', id: id:
-mas 'jp.naver.line.mac', id: id:
+# mas 'com.apple.dt.Xcode', id: id:
+# mas 'jp.naver.line.mac', id: id:

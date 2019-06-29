@@ -7,7 +7,7 @@ echo 'homebrew install command'
 # homebrew のインストール
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo 'Run app install on homeberw'
+echo 'Run app install on homebrew'
 # Brefile に乗ってるアプリケーションを HomeBrew を使ってインストールしてくれます。
 # すでにインストールされているものは無視される & 必要なアプリのみ残してあとはコメントアウトしてます。
 # 欲しかったらコメントアウトを外してください。

@@ -28,6 +28,7 @@ curl -sf https://raw.githubusercontent.com/yasudanaoya/dotfiles/master/dotfile.s
 cd ${HOME}
 git pull git@github.com:yasudanaoya/dotfiles.git
 cd dotfiles
+git checkout setup4ua-helpers
 sh dotfile.sh
 ```
 

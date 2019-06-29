@@ -3,6 +3,9 @@ echo 'declare the variable'
 # 一応、環境変数に入れてます
 DOT_DIR=${HOME}/dotfiles
 
+echo 'ブランチの切り替え'
+git checkout setup4ua-helpers
+
 echo 'homebrew install command'
 # homebrew のインストール
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

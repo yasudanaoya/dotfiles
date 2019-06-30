@@ -106,6 +106,33 @@ zstyle ':vcs_info:*' unstagedstr '%F{red}-'
 zstyle ':vcs_info:*' formats '%F{green}%c%u[%b]%f'
 zstyle ':vcs_info:*' actionformats '%F{red}[%b]<%a>%f'
 
+# push していないコミットの件数表示
+#
+# リモートリポジトリに push していないコミットの件数を
+# pN という形式で misc (%m) に表示する
+function +vi-git-push-status() {
+    # zstyle formats, actionformats の2番目のメッセージのみ対象にする
+    if [[ "$1" != "1" ]]; then
+        return 0
+    fi
+
+    if [[ "${hook_com[branch]}" != "master" ]]; then
+        # master ブランチでない場合は何もしない
+        return 0
+    fi
+
+    # push していないコミット数を取得する
+    local ahead
+    ahead=$(command git rev-list origin/master..master 2>/dev/null \
+        | wc -l \
+        | tr -d ' ')
+
+    if [[ "$ahead" -gt 0 ]]; then
+        # misc (%m) に追加
+        hook_com[misc]+="(p${ahead})"
+    fi
+}
+
 function vcs_info_msg() {
     LANG=en_US.UTF-8 vcs_info
     RPROMPT="${vcs_info_msg_0_}"

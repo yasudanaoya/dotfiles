@@ -16,8 +16,8 @@ colors
 
 # ls でフォルダに色をつける
 # フォルダを黄、シンボリックリンクを赤
-export LSCOLORS=dxbx
-alias ls="ls -GF"
+# export LSCOLORS=dxbxs
+# alias ls="ls -GF"
 
 # プロンプトのレイアウト
 PROMPT="%{${fg[cyan]}%}[%*] %{${fg[yellow]}%} %~
@@ -145,10 +145,6 @@ alias mkdir='mkdir -p'
 
 # sudo の後のコマンドでエイリアスを有効にする
 alias sudo='sudo '
-
-# グローバルエイリアス
-alias -g L='| less'
-alias -g G='| grep'
 
 # docker
 alias d='docker'

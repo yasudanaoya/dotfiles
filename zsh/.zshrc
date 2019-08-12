@@ -8,25 +8,6 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 ########################################
-# env
-
-# rbenvのpath設定
-[[ -d ~/.rbenv  ]] && \
-  export PATH=${HOME}/.rbenv/bin:${PATH} && \
-  eval "$(rbenv init -)"
-
-########################################
-# brew
-
-# brewfile を自動で更新する
-if [ -f $(brew --prefix)/etc/brew-wrap ];then
-  source $(brew --prefix)/etc/brew-wrap
-fi
-
-# brewfile の場所を変更する
-export HOMEBREW_BREWFILE=~/dotfiles/Brewfile
-
-########################################
 # terminal color
 
 # 色を使用出来るようにする
@@ -40,7 +21,7 @@ alias ls="ls -GF"
 
 # プロンプトのレイアウト
 PROMPT="%{${fg[cyan]}%}[%*] %{${fg[yellow]}%} %~
-%{${fg[magenta]}%}% ==> %# %{${reset_color}%}"
+%{${fg[magenta]}%}% [%m] %# %{${reset_color}%}"
 
 ########################################
 

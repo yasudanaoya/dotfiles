@@ -20,8 +20,8 @@ colors
 # alias ls="ls -GF"
 
 # プロンプトのレイアウト
-PROMPT="%{${fg[cyan]}%}[%*] %{${fg[yellow]}%} %~
-🐳%{${fg[magenta]}%}% [%m] %# %{${reset_color}%}"
+PROMPT="%{${fg[cyan]}%}[%*] %{${fg[yellow]}%} 🐳 %~
+%{${fg[magenta]}%}% [%m] %# %{${reset_color}%}"
 
 ########################################
 

@@ -2,11 +2,6 @@
 # 環境変数
 export LANG=ja_JP.UTF-8
 
-# ヒストリの設定
-HISTFILE=${HOME}/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
-
 ########################################
 # terminal color
 
@@ -23,69 +18,8 @@ colors
 PROMPT="%{${fg[cyan]}%}[%*] %{${fg[yellow]}%} %~
 %{${fg[magenta]}%}% [%m] %# %{${reset_color}%}"
 
-########################################
-
-# 補完
-
-# 補完機能を有効にする
-autoload -Uz compinit
-compinit
-zstyle ':completion:*:default' menu select=1
-
-# 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# ../ の後は今いるディレクトリを補完しない
-zstyle ':completion:*' ignore-parents parent pwd ..
-
-# sudo の後ろでコマンド名を補完する
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                    /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
-
-# ps コマンドのプロセス名補完
-zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-
-# 補完の表示を詰める
-setopt list_packed
-
-########################################
-
-# emacs 風キーバインドにする
-bindkey -e
-
 # タイプミス時の指摘
 setopt correct
-
-# cd後のlsの省略
-setopt auto_cd
-function chpwd() { ls }
-
-# 単語の区切り文字を指定する
-autoload -Uz select-word-style
-select-word-style default
-# ここで指定した文字は単語区切りとみなされる
-# / も区切りと扱うので、^W でディレクトリ１つ分を削除できる
-zstyle ':zle:*' word-chars " /=;@:{},|"
-zstyle ':zle:*' word-style unspecified
-
-########################################
-# # vcs_info
-# # git
-# autoload -Uz vcs_info
-# autoload -Uz add-zsh-hook
-
-# zstyle ':vcs_info:*' check-for-changes true
-# zstyle ':vcs_info:*' formats '%F{green}[%b]%f'
-# zstyle ':vcs_info:*' actionformats '%F{red}[%b]<!%a>%f'
-
-# function vcs_info_msg() {
-#     LANG=en_US.UTF-8 vcs_info
-#     RPROMPT="${vcs_info_msg_0_}"
-# }
-# add-zsh-hook precmd vcs_info_msg
-
-########################################
-# オプション
 
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
@@ -149,17 +83,3 @@ alias sudo='sudo '
 # docker
 alias d='docker'
 alias dc='docker-compose'
-
-########################################
-
-# C で標準出力をクリップボードにコピーする
-if which pbcopy >/dev/null 2>&1 ; then
-    # Mac
-    alias -g C='| pbcopy'
-elif which xsel >/dev/null 2>&1 ; then
-    # Linux
-    alias -g C='| xsel --input --clipboard'
-elif which putclip >/dev/null 2>&1 ; then
-    # Cygwin
-    alias -g C='| putclip'
-fi
